@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0b257a",
-        secondary: "cyan",
-        ctcPrimary: "cyan",
-        text: "white",
-        background: "black",
+        primary: "#D3D3D3",
+        secondary: "#580B57",
+        tertiary: "#FFFFFF",
+        ctcPrimary: "#580B57",
+        ctcSecondary: "#D3D3D3",
+        textPrimary: "#ffffff",
+        textSecondary: "#580B57",
       },
 
       fontFamily: {
