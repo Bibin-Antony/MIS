@@ -17,7 +17,7 @@ const AdmissionProcess = () => {
             <ul className="ml-10 ">
               <li className="list-disc mt-1">Campus Tour</li>
               <li className="list-disc mt-1">Online Test</li>
-              <li className="list-disc mt-1">Parents & Students Interaction</li>
+              <li className="list-disc mt-1">Parents and Students Interaction</li>
             </ul>
             <span>4. Registration of Admission</span>
             <span>
