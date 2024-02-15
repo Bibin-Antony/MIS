@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
+  ],
   theme: {
     extend: {
       colors: {
@@ -21,7 +25,12 @@ export default {
   variants: {
     extend: {
       backgroundColor: ["active"],
+      translate: ['hover'],
+    }
     },
+<<<<<<< HEAD
+=======
   },
-  plugins: [],
+>>>>>>> b4beb81d44eb4e02b6692f5b6fea75c2ae8f44c7
+  plugins: [require("flowbite/plugin")],
 };

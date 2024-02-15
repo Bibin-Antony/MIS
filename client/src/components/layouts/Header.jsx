@@ -1,9 +1,9 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/Images/LogoAndOthers/MIS_Main_logo.png"; // Adjust the path accordingly
-
+import { motion } from "framer-motion";
 const Header = () => {
   const [show, setShow] = useState(false);
 
@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="sticky z-10 top-0 left-0 bg-primary p-5 text-textSecondary md:relative w-full">
+    <div className="sticky z-10 top-0 left-0 bg-primary p-5 text-textSecondary lg:relative w-full">
       {!show ? (
         <RxHamburgerMenu
           onClick={toggleNavbar}
@@ -31,79 +31,112 @@ const Header = () => {
         }`}
       >
         <li>
-          <Link to={"/"}>Home</Link>
+          <NavLink to={"/"}>Home</NavLink>
         </li>
         <li>
-          <Link to={"admissions"}>Admissions</Link>
+          <NavLink to={"admissions"}>Admissions</NavLink>
         </li>
         <li>
-          <Link to={"academics"}>Academics</Link>
+          <NavLink to={"academics"}>Academics</NavLink>
         </li>
         <li>
-          <Link to={"our-team"}>Our Team</Link>
+          <NavLink to={"our-team"}>Our Team</NavLink>
         </li>
         <li>
-          <Link to={"about-us"}>About Us</Link>
+          <NavLink to={"about-us"}>About Us</NavLink>
         </li>
         <li>
-          <Link to={"contact-us"}>Contact Us</Link>
+          <NavLink to={"contact-us"}>Contact Us</NavLink>
+        </li>
+        <li>
+          <NavLink to={"link7"}>Link 7</NavLink>
         </li>
       </ul>
 
       <ul className="hidden bg-primary lg:flex p-4 z-10 fixed top-0 left-0 items-center justify-around font-semibold tracking-wider w-full">
-        <li>
-          <Link
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0 }}
+        >
+          <NavLink
             to={"/"}
             className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
           >
             Home
-          </Link>
-        </li>
-        <li>
-          <Link
+          </NavLink>
+        </motion.li>
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0.1 }}
+        >
+          <NavLink
             to={"admissions"}
             className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
           >
             Admissions
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"academics"}
-            className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
+          </NavLink>
+        </motion.li>
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0.2 }}
+          className="relative group"
+        >
+          <NavLink
+            to={"/academics"}
+            className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300 after:rounded-lg"
           >
             Academics
-          </Link>
-        </li>
-        <li>
-          <Link to={"/"}>
+          </NavLink>
+        </motion.li>
+        <motion.li
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          initial={{ y: 0, opacity: 0, scale: 0.8 }}
+          transition={{ duration: 1.5, delay: 2.5 }}
+        >
+          <NavLink to={"/"}>
             <img src={logo} className="w-[15rem]" alt="" />
-          </Link>
-        </li>
-        <li>
-          <Link
+          </NavLink>
+        </motion.li>
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0.3 }}
+        >
+          <NavLink
+            to={"/academics/facilities"}
+            className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
+          >
+            Facilities
+          </NavLink>
+        </motion.li>
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0.4 }}
+        >
+          <NavLink
             to={"our-team"}
             className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
           >
             Our Team
-          </Link>
-        </li>
-        <li>
-          <Link
-            to={"about-us"}
-            className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
-          >
-            About Us
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="contact-us"
+          </NavLink>
+        </motion.li>
+
+        <motion.li
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          transition={{ duration: 1.8, delay: 0.5 }}
+        >
+          <NavLink
+            to={"contact-us"}
             className="after:bg-secondary after:scale-0 hover:after:scale-100 after:h-[2px] after:origin-center after:block after:transition-all after:duration-300  after:rounded-lg"
           >
             Contact Us
-          </Link>
-        </li>
+          </NavLink>
+        </motion.li>
       </ul>
     </div>
   );

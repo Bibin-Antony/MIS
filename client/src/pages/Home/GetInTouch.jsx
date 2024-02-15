@@ -3,11 +3,22 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Button4 from "../../components/layouts/Button4";
+import { motion } from "framer-motion";
 
 const GetInTouch = () => {
   return (
+<<<<<<< HEAD
+    <div className="flex flex-col lg:flex-row mt-20 mb-15 p-4 lg:p-10  bg-center tracking-wide">
+=======
     <div className="flex flex-col lg:flex-row p-4 lg:p-10 bg-[#d3d3d3] bg-center tracking-wide">
-      <div className="lg:w-1/2 bg-secondary rounded-lg lg:py-[3rem] lg:px-8 flex flex-col items-start gap-6 shadow-lg p-4 mb-4 text-black ">
+>>>>>>> b4beb81d44eb4e02b6692f5b6fea75c2ae8f44c7
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="lg:w-1/2 bg-secondary rounded-lg lg:py-[3rem] lg:px-8 flex flex-col items-start gap-6 shadow-lg p-4 mb-4 text-black "
+      >
         <h1 className="text-3xl font-bold text-white">Get in touch!</h1>
         <p className="text-white">
           Whether you have inquiries, suggestions, or would simply like to reach
@@ -41,9 +52,15 @@ const GetInTouch = () => {
           />
           <Button4 title={"Submit"} />
         </form>
-      </div>
+      </motion.div>
 
-      <div className="lg:w-1/2 p-4 lg:p-12 flex flex-col gap-6 text-textSecondary">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="lg:w-1/2 p-4 lg:p-12 flex flex-col gap-6 text-textSecondary"
+      >
         <h2 className=" font-bold text-2xl">Our Location</h2>
         <div className="mt-4 shadow-mb rounded-md">
           <iframe
@@ -65,9 +82,9 @@ const GetInTouch = () => {
           facilities, and feel the vibrant atmosphere that makes our school a
           unique and enriching place for education.
         </p>
-        <div>
-          <h2 className="text-2xl font-semibold text-black">Social Media</h2>
-          <div className="flex gap-3 mt-3 text-black">
+        <div className="text-textSecondary">
+          <h2 className="text-2xl font-semibold">Social Media</h2>
+          <div className="flex gap-3 mt-3">
             <FaInstagram className="text-4xl hover:cursor-pointer hover:bg-gradient-to-r hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 transition-all duration-300 hover:scale-110 hover:text-white p-2 rounded-md instagram-icon"></FaInstagram>
             <Link to="https://www.facebook.com/mlzsmys/">
               <FaFacebook className="text-4xl hover:cursor-pointer hover:bg-blue-500 transition-all duration-300 hover:scale-110 hover:text-white p-2 rounded-md"></FaFacebook>
@@ -79,7 +96,7 @@ const GetInTouch = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

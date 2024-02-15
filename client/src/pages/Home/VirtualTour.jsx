@@ -1,10 +1,17 @@
-import Button1 from "../../components/layouts/Button1";
-import scanMe from "../../assets/Images/HomeImages/undraw_Stripe_payments_re_chlm.png"; // Adjust the path accordingly
+import scanMe from "../../assets/Images/HomeImages/scan_me-8.png"; // Adjust the path accordingly
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const VirtualTour = () => {
   return (
-    <div className="p-6 text-textSecondary bg-primary space-y-8 md:space-y-0 md:grid grid-cols-2 lg:px-20 lg:py-28 border-t border-y-secondary">
-      <div className="space-y-6 md:space-y-10  col-span-1">
+    <div className="p-6 text-textSecondary bg-primary space-y-8 md:space-y-0 md:grid grid-cols-2 lg:px-20 lg:py-28 ">
+      <motion.div
+        initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="space-y-6 md:space-y-7  col-span-1"
+      >
         <div>
           <h2 className="text-3xl font-semibold md:text-3xl lg:text-5xl">
             Virtual School Tour
@@ -14,7 +21,6 @@ const VirtualTour = () => {
             International School.
           </h5>
         </div>
-
         <p className="text-left md:text-justify">
           Unlock the doors to Mysore International School by scanning the QR
           code on the left. Immerse yourself in a virtual stroll around our
@@ -22,11 +28,24 @@ const VirtualTour = () => {
           of our school from the outside. Get a sneak peek into the world of
           learning that awaits within.
         </p>
-        <Button1 title={"Know More"} />
-      </div>
-      <div className="md:flex items-center justify-center col-span-1">
-        <img src={scanMe} alt="" className="w-1/2  md:w-1/2 lg:w-1/3" />
-      </div>
+        <div>
+          <Link
+            to={"academics/facilities"}
+            className="px-20 rounded-md shadow-sm shadow-white border p-2 font-semibold tracking-widest active:shadow-none active:translate-x-1 active:translate-y-1 transition-all duration-200 hover:scale-105 bg-ctcPrimary text-white"
+          >
+            Know More
+          </Link>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+        className=" md:flex items-center justify-end col-span-1 mr-20"
+      >
+        <img src={scanMe} alt="" className="ml-20 w-1/2  md:w-1/2 lg:w-1/3" />
+      </motion.div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Slider from "../../components/layouts/Slider";
 import image1 from "../../assets/Images/HomeImages/CarouselImages/children_outing.jpg"; // Adjust the path accordingly
 import image2 from "../../assets/Images/HomeImages/CarouselImages/principle_and_children.jpg"; // Adjust the path accordingly
 import image3 from "../../assets/Images/HomeImages/CarouselImages/children_kannada_rajostsava.jpg"; // Adjust the path accordingly
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -18,13 +19,17 @@ const slides = [
   },
 ];
 
-console.log(slides);
-
 const SliderCarousel = () => {
   return (
-    <div className="slider-container w-[100vw] h-[83vh]">
+    <motion.div
+      animate={{ y: 0, scale: 1, opacity: 1 }}
+      initial={{ y: 0, scale: 0.8, opacity: 0 }}
+      transition={{ duration: 1.8, delay: 2.4 }}
+      viewport={{ once: true }}
+      className="slider-container w-[100vw] h-[83vh]"
+    >
       <Slider slides={slides} />
-    </div>
+    </motion.div>
   );
 };
 

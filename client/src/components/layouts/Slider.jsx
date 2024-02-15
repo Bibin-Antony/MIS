@@ -9,7 +9,7 @@ const Slider = ({ slides }) => {
       setIndex((prevIndex) =>
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change the duration as needed (in milliseconds)
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [index, slides.length]);
@@ -27,7 +27,7 @@ const Slider = ({ slides }) => {
   };
 
   return (
-    <div className="h-[100%] relative">
+    <div className="h-[100%] relative rounded">
       <button
         onClick={handlePrev}
         className="absolute left-5 top-1/2  p-2 rounded-md text-white font-bold"
@@ -49,18 +49,21 @@ const Slider = ({ slides }) => {
           height: "100%",
           transition: "all 0.3s ease",
           objectFit: "cover",
+          borderRadius: "0.5rem",
         }}
       ></div>
-      <div className="absolute bottom-4 left-1/2 transform flex space-x-2">
-        {slides.map((_, i) => (
-          <span
-            key={i}
-            className={`w-5 h-1 hover:cursor-pointer focus:bg-white rounded-full ${
-              index === i ? "bg-white" : "bg-red-500"
-            }`}
-            onClick={() => setIndex(i)}
-          ></span>
-        ))}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <div className="flex items-center justify-center space-x-2">
+          {slides.map((_, i) => (
+            <span
+              key={i}
+              className={`w-5 h-1 hover:cursor-pointer focus:bg-white rounded-full ${
+                index === i ? "bg-white" : "bg-red-500"
+              }`}
+              onClick={() => setIndex(i)}
+            ></span>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/Contact";
 import Academics from "./pages/Academics/Academics";
 import Admissions from "./pages/Admissions/Admissions";
 import OurTeam from "./pages/Ourteam/OurTeam";
+import Facilities from "./pages/Academics/Facilities";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="academics" element={<Academics />}></Route>
         <Route path="admissions" element={<Admissions />}></Route>
         <Route path="our-team" element={<OurTeam />}></Route>
+        <Route path="/academics/facilities" element={<Facilities />}></Route>
       </Routes>
     </Router>
   );

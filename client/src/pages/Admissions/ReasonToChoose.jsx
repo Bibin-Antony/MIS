@@ -3,6 +3,7 @@ import { LuClock } from "react-icons/lu";
 import { FaMapMarkedAlt } from "react-icons/fa";
 
 const ReasonToChoose = () => {
+  
   const data = [
     {
       id: "1",
@@ -25,7 +26,7 @@ const ReasonToChoose = () => {
   ];
 
   return (
-    <div className="text-textSecondary px-4 py-8 bg-primary tracking-wide md:py-16 md:px-8">
+    <div className="text-textSecondary bg-white px-4 py-8 bg-primary tracking-wide md:py-16 md:px-8">
       <h2 className="text-center font-semibold text-2xl">
         A few reasons to choose
       </h2>

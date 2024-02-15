@@ -1,6 +1,8 @@
+
+
 const AdmissionProcess = () => {
   return (
-    <div className="p-6 sm:p-12 md:p-20 flex flex-col gap-5 items-start justify-center bg-[#d3d3d3] text-[#580b57]">
+    <div className="bg-white p-6 sm:p-12 md:p-20 flex flex-col gap-5 items-start justify-center bg-[#d3d3d3] text-[#580b57]">
       <div className="flex flex-col items-start justify-center gap-2">
         <h2 className="text-2xl">Admission Process</h2>
         <div className="flex flex-col items-start justify-center gap-3">
@@ -79,6 +81,7 @@ const AdmissionProcess = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

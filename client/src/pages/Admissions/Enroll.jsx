@@ -1,7 +1,3 @@
-import Button1 from "../../components/layouts/Button1";
-import Button2 from "../../components/layouts/Button2";
-import Button3 from "../../components/layouts/Button3";
-import Button4 from "../../components/layouts/Button4";
 import Button5 from "../../components/layouts/Button5";
 
 const Enroll = () => {
@@ -24,7 +20,7 @@ const Enroll = () => {
           reach out to us.
         </p>
       </div>
-      <div className="text-textSecondary bg-primary p-4 space-y-6 rounded-md">
+      <div className="text-textSecondary bg-white p-4 space-y-6 rounded-md">
         <h2 className="uppercase text-center font-semibold p-4 text-2xl">
           enrollment form
         </h2>
@@ -36,22 +32,22 @@ const Enroll = () => {
             <input
               type="text"
               placeholder="Parent's Name"
-              className="p-2 outline-none rounded-sm w-full"
+              className="p-2 outline-none rounded-sm w-full border-slate-400"
             />
             <input
               type="text"
               placeholder="Phone Number"
-              className="p-2 outline-none rounded-sm w-full"
+              className="p-2 outline-none rounded-sm w-full border-slate-400"
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-2 outline-none rounded-sm w-full"
+              className="p-2 outline-none rounded-sm w-full border-slate-400"
             />
           </div>
           <div className="col-span-full lg:col-span-1  mt-10 lg:m-0 lg:p-3">
             <textarea
-              className="w-full p-2 rounded-sm outline-none"
+              className="w-full p-2 rounded-sm outline-none border-slate-400"
               placeholder="Message"
               name=""
               id=""

@@ -19,12 +19,8 @@ const Footer = () => {
   return (
     <div className="bg-secondary p-4 md:p-10  text-[12px] text-white lg:py-10 tracking-wide">
       <div className="lg:grid grid-cols-4 md:gap-20 space-y-10 md:space-y-0">
-        <div className="mb-10 md:mb-0">
-          <img
-            src={logo}
-            className="w-1/2 sm:w-1/3 md:w-1/5 lg:w-[70%] object-cover"
-            alt=""
-          />
+        <div className="mb-10 md:mb-0 lg:flex items-center justify-start">
+          <img src={logo} className="" alt="" />
         </div>
         <div className="space-y-4">
           <div className="">
